@@ -1,0 +1,13 @@
+extends ./main.jade
+
+block title
+	title 公司简介
+
+block content
+	-var active = 2;
+	div.ui.grid
+		div.sixteen.wide.column
+			div.ui.segment
+				h2.ui.header.left.floated 公司介绍
+				div.ui.divider.clearing
+				include ./company-text.jade

@@ -1,0 +1,21 @@
+extends ./main.jade
+block title
+	title 联系我们
+
+block content
+	style .list{margin: auto;} .item{margin: 1em 0;} .content{display:inline-block;}
+	style i.icon, i.icons{font-size: 1.4em;color:#333333;}
+
+	- var active = 3;
+	- var list = [{'icon':'building','content':'牛逼公司'},{'icon':'linkify','content':''},{'icon':'user','content':''},{'icon':'mobile','content':''},{'icon':'text telephone','content':''},{'icon':'fax','content':''},{'icon':'mail','content':''},{'icon':'qq','content':''},{'icon':'wechat','content':''},{'icon':'marker','content':'1111'}];
+
+	div.ui.grid
+		div.ul.list.six.wide.column
+			div.ui.segment
+				h2.ui.header.left.floated 联系方式
+				div.ui.divider.clearing
+				p
+					-for (var i = 0; i < list.length; i++)
+						div.item
+							i(class="#{list[i].icon} icon")
+							div.content #{list[i].content}

@@ -1,0 +1,18 @@
+extends ./main.jade
+block title
+	title 案例
+
+block content
+	style .list{margin: auto;} .item{margin: 1em 0;} .content{display:inline-block;}
+	style i.icon, i.icons{font-size: 1.4em;color:#333333;}
+
+	- var active = 3;
+	- var list = [{'icon':'building','content':'牛逼公司'},{'icon':'linkify','content':''},{'icon':'user','content':''},{'icon':'mobile','content':''},{'icon':'text telephone','content':''},{'icon':'fax','content':''},{'icon':'mail','content':''},{'icon':'qq','content':''},{'icon':'wechat','content':''},{'icon':'marker','content':'1111'}];
+
+	div.ui.grid
+		div.ul.list.sixteen.wide.column
+			div.ui.segment
+				h2.ui.header.left.floated 案例
+				div.ui.divider.clearing
+				div.ui.stackable.four.column.grid
+					include ./article-list.jade

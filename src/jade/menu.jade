@@ -1,0 +1,25 @@
+-var menu = [{'name':'主页','link':'home.html'},{'name':'案例','link':'article.html'},{'name':'公司介绍','link':'company.html'},{'name':'联系我们','link':'ours.html'}]
+
+mixin menuList
+	-for (var i = 0; i < menu.length; i++) 
+		if i == active
+			a.active.item(href="#{menu[i].link}") #{menu[i].name}
+		else
+			a.item(href="#{menu[i].link}") #{menu[i].name}
+
+script.
+	$(document).ready(function() {
+		// fix menu when passed
+		$('.masthead').visibility({
+			once: false,
+			onBottomPassed: function() {
+				$('.fixed.menu').transition('fade in');
+			},
+			onBottomPassedReverse: function() {
+				$('.fixed.menu').transition('fade out');
+			}
+		});
+
+		// create sidebar and attach to menu open
+		$('.ui.sidebar').sidebar('attach events', '.toc.item');
+	});

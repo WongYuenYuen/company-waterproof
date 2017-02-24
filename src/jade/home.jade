@@ -1,0 +1,21 @@
+extends ./main.jade
+
+block title
+	title 主页
+
+block content
+	-var active = 0;
+	div.ui.grid.stackable.four.column
+		div.eleven.wide.column
+			div.ui.piled.segments
+				div.ui.segment
+					p 案例
+			div.ui.stackable.three.column.grid
+				include ./article-list.jade
+		div.five.wide.column
+			div.ui.piled.segments
+				div.ui.segment
+					p 公司介绍
+			div.ui.stackable.one.column.grid
+				include ./company-text.jade
+

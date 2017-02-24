@@ -1,0 +1,35 @@
+doctype html
+html(lang="zh")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+    block title
+      title Default title
+    include ./css.jade
+    include ./script.jade
+
+  body
+    include ./menu.jade
+    div.ui.large.top.fixed.hidden.menu
+      div.ui.container
+        +menuList
+    div.ui.vertical.inverted.sidebar.menu
+      +menuList
+
+    div.pusher
+      div.ui.inverted.vertical.masthead.center.aligned.segment
+        div.ui.container
+          div.ui.large.secondary.inverted.pointing.menu
+            a.toc.item
+              i.sidebar.icon
+            +menuList
+        div.ui.text.container
+          h1.ui.inverted.header 我是公司
+          h2 我们很牛逼
+
+      div.ui.vertical.segment.centered.custom-content
+        block content
+      div.ui.inverted.vertical.footer.segment.custom-footer
+        div.ui.container.center
+          p 牛逼公司 广州市番禺区市桥光明北路372号

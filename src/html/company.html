@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>公司简介</title>
+    <!-- - var links = ['reset','site','container','grid','header','image','menu','divider','dropdown','segment','button','list','icon','sidebar','transition','card','reveal']-->
+    <!-- -for (var i = 0; i < links.length; i++) -->
+    <!--     link(rel="stylesheet", type="text/css",href="#{semanticCssPath}/#{links[i]}.min.css")-->
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../semantic/dist/components/visibility.js"></script>
+    <script src="../semantic/dist/components/sidebar.js"></script>
+    <script src="../semantic/dist/components/transition.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function() {
+      	// fix menu when passed
+      	$('.masthead').visibility({
+      		once: false,
+      		onBottomPassed: function() {
+      			$('.fixed.menu').transition('fade in');
+      		},
+      		onBottomPassedReverse: function() {
+      			$('.fixed.menu').transition('fade out');
+      		}
+      	});
+      
+      	// create sidebar and attach to menu open
+      	$('.ui.sidebar').sidebar('attach events', '.toc.item');
+      });
+    </script>
+    <div class="ui large top fixed hidden menu">
+      <div class="ui container"><a href="home.html" class="item">主页</a><a href="article.html" class="item">案例</a><a href="company.html" class="item">公司介绍</a><a href="ours.html" class="item">联系我们</a>
+      </div>
+    </div>
+    <div class="ui vertical inverted sidebar menu"><a href="home.html" class="item">主页</a><a href="article.html" class="item">案例</a><a href="company.html" class="item">公司介绍</a><a href="ours.html" class="item">联系我们</a>
+    </div>
+    <div class="pusher">
+      <div class="ui inverted vertical masthead center aligned segment">
+        <div class="ui container">
+          <div class="ui large secondary inverted pointing menu"><a class="toc item"><i class="sidebar icon"></i></a><a href="home.html" class="item">主页</a><a href="article.html" class="item">案例</a><a href="company.html" class="item">公司介绍</a><a href="ours.html" class="item">联系我们</a>
+          </div>
+        </div>
+        <div class="ui text container">
+          <h1 class="ui inverted header">我是公司</h1>
+          <h2>我们很牛逼</h2>
+        </div>
+      </div>
+      <div class="ui vertical segment centered custom-content">
+        <div class="ui grid">
+          <div class="sixteen wide column">
+            <div class="ui segment">
+              <h2 class="ui header left floated">公司介绍</h2>
+              <div class="ui divider clearing"></div>
+              <p> 上海云风防水工程有限公司是一家专业从事建筑防水工程施工、建筑堵漏、防腐防潮保温工程、建筑装修工程的施工企业。</p>
+              <p>质量是根本，服务是保障。公司以专业知识理论培训和实践施工两个方面着手，组建了一个完整、严密、高效的质量管理网络，企业根据防水、防腐工程的技术要求，从每一道工序标准进行人员培训和生产考核，从机械设备、原材料、配件、工序半成品和成品进行严格的检查。建立了职责分明、奖罚分明的管理制度，保证了企业的产品质量。</p>
+              <p>展望未来，前程似锦。公司将以先进的管理手段，完善的质量保证体系，优良的售后服务进行现代企业运作。公司全体同仁愿与社会各界真诚携手、励精图强、追求卓越，共创美好的未来！</p>
+              <p>本公司目前新配备有国内最先进的一整套机械设备。对于屋顶、墙面、地下室、水池、卫生间、车库坡道、沉降缝、彩钢板、公装等…疑难渗漏和装修问题有最佳的解决方案、免除漏水和设计之忧愁！</p>
+              <p>主营：上海防水工程报价;上海防水工程施工;上海防水工程公司;上海防水堵漏工程;防水工程公司;上海防水工程;防水堵漏工程;上海防水工程施工方案;上海防水施工;屋面防水;房屋补漏;地下室防水;外墙防水施工;屋顶防水;防水工程;防水施工公司;专业防水堵漏;专业防水公司;地下防水施工方案;外墙防水施工方案</p>
+              <p>本公司的主营产品：</p>
+              <p>企业名称：上海云风防水工程有限公司</p>
+              <p>品牌名称：云风防水工程</p>
+              <p>所在地：上海市 上海市 闵行区上海市闵行区莘庄镇疏影路1111弄146号101室</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui inverted vertical footer segment custom-footer">
+        <div class="ui container center">
+          <p>牛逼公司 广州市番禺区市桥光明北路372号</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
