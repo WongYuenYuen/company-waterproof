@@ -102,7 +102,8 @@ gulp.task('livereload', function() {
     livereload.listen();
     gulp.watch('./sass/*.scss', ['sass']);
     gulp.watch('./jade/*.jade', ['templates']);
-    gulp.watch([path.html.srcPath, path.scss.srcPath, path.js.srcPath, path.jade.srcPath]).on('change', livereload.changed);
+    gulp.watch([path.html.srcPath, path.scss.srcPath, path.js.srcPath,path.jade.srcPath]).on('change', livereload.changed);
+    // gulp.watch([path.html.srcPath, path.scss.srcPath, path.js.srcPath]).on('change', livereload.changed);
 
 });
 
@@ -168,6 +169,7 @@ gulp.task('clean', function() {
 
 /** 开发环境 */
 gulp.task('dev', ['templates', 'webserver', 'sass', 'livereload']);
+// gulp.task('dev', ['webserver', 'sass', 'livereload']);
 
 
 /** 生产环境 */

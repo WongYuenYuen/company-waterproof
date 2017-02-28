@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>案例</title>
-    <!-- - var links = ['reset','site','container','grid','header','image','menu','divider','dropdown','segment','button','list','icon','sidebar','transition','card','reveal']-->
-    <!-- -for (var i = 0; i < links.length; i++) -->
-    <!--     link(rel="stylesheet", type="text/css",href="#{semanticCssPath}/#{links[i]}.min.css")-->
     <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/rainEffect/effect.css">
+    <link rel="stylesheet" type="text/css" href="../css/rainEffect/normalize.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
     <script src="../lib/jquery.min.js"></script>
+    <script src="../js/rainEffect/index.min.js"></script>
     <script src="../semantic/dist/components/visibility.js"></script>
     <script src="../semantic/dist/components/sidebar.js"></script>
     <script src="../semantic/dist/components/transition.js"></script>
@@ -41,13 +41,18 @@
     </div>
     <div class="pusher">
       <div class="ui inverted vertical masthead center aligned segment">
+        <div class="image-preload"><img src="../images/rainEffect/drop-color.png"><img src="../images/rainEffect/drop-alpha.png"><img src="../images/rainEffect/weather/texture-rain-fg.png"><img src="../images/rainEffect/weather/texture-rain-bg.png"><img src="../images/rainEffect/weather/texture-sun-fg.png"><img src="../images/rainEffect/weather/texture-sun-bg.png"><img src="../images/rainEffect/weather/texture-fallout-fg.png"><img src="../images/rainEffect/weather/texture-fallout-bg.png"><img src="../images/rainEffect/weather/texture-drizzle-fg.png"><img src="../images/rainEffect/weather/texture-drizzle-bg.png"></div>
+        <div class="rain-container">
+          <div class="slideshow">
+            <canvas width="1" height="1" id="container" style="position:absolute;left:0;"></canvas>
+            <div id="slide-1" data-weather="rain" class="slide">
+              <div class="slide__element slide__element--temp">豪睿建筑防水工程</div>
+            </div>
+          </div>
+        </div>
         <div class="ui container">
           <div class="ui large secondary inverted pointing menu"><a class="toc item"><i class="sidebar icon"></i></a><a href="home.html" class="item">主页</a><a href="article.html" class="item">案例</a><a href="company.html" class="item">公司介绍</a><a href="ours.html" class="item">联系我们</a>
           </div>
-        </div>
-        <div class="ui text container">
-          <h1 class="ui inverted header">豪睿建筑防水工程有限公司</h1>
-          <h2>专业的防水公司</h2>
         </div>
       </div>
       <div class="ui vertical segment centered custom-content">

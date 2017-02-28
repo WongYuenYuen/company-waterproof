@@ -1,6 +1,20 @@
-.ui.inverted.segment,
-.ui.primary.inverted.segment {
-    background: #3895da;
+.ui.secondary.inverted.pointing.menu .item {
+    color: #252445 !important;
+}
+
+.ui.inverted.segment {
+    padding: 0;
+    background: transparent;
+}
+
+.ui.inverted.segment.custom-footer {
+    margin-top: 1em;
+    padding: 2em 0;
+    background: #e0ebef;
+}
+
+.ui.inverted.segment.custom-footer p {
+    color: #252445 !important;
 }
 
 .hidden.menu {

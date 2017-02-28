@@ -18,15 +18,31 @@ html(lang="zh")
       +menuList
 
     div.pusher
+
       div.ui.inverted.vertical.masthead.center.aligned.segment
+        div.image-preload
+          img(src="../images/rainEffect/drop-color.png")
+          img(src="../images/rainEffect/drop-alpha.png")
+          img(src="../images/rainEffect/weather/texture-rain-fg.png")
+          img(src="../images/rainEffect/weather/texture-rain-bg.png")
+          img(src="../images/rainEffect/weather/texture-sun-fg.png")
+          img(src="../images/rainEffect/weather/texture-sun-bg.png")
+          img(src="../images/rainEffect/weather/texture-fallout-fg.png")
+          img(src="../images/rainEffect/weather/texture-fallout-bg.png")
+          img(src="../images/rainEffect/weather/texture-drizzle-fg.png")
+          img(src="../images/rainEffect/weather/texture-drizzle-bg.png")
+
+        div.rain-container
+          div.slideshow
+            canvas(width="1" height="1" id="container" style="position:absolute;left:0;")
+            div.slide#slide-1(data-weather="rain")
+              div.slide__element.slide__element--temp 豪睿建筑防水工程
+      
         div.ui.container
           div.ui.large.secondary.inverted.pointing.menu
             a.toc.item
               i.sidebar.icon
             +menuList
-        div.ui.text.container
-          h1.ui.inverted.header 豪睿建筑防水工程有限公司
-          h2 专业的防水公司
 
       div.ui.vertical.segment.centered.custom-content
         block content

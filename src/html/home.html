@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>主页</title>
-    <!-- - var links = ['reset','site','container','grid','header','image','menu','divider','dropdown','segment','button','list','icon','sidebar','transition','card','reveal']-->
-    <!-- -for (var i = 0; i < links.length; i++) -->
-    <!--     link(rel="stylesheet", type="text/css",href="#{semanticCssPath}/#{links[i]}.min.css")-->
     <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/rainEffect/effect.css">
+    <link rel="stylesheet" type="text/css" href="../css/rainEffect/normalize.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
     <script src="../lib/jquery.min.js"></script>
+    <script src="../js/rainEffect/index.min.js"></script>
     <script src="../semantic/dist/components/visibility.js"></script>
     <script src="../semantic/dist/components/sidebar.js"></script>
     <script src="../semantic/dist/components/transition.js"></script>
@@ -41,13 +41,18 @@
     </div>
     <div class="pusher">
       <div class="ui inverted vertical masthead center aligned segment">
+        <div class="image-preload"><img src="../images/rainEffect/drop-color.png"><img src="../images/rainEffect/drop-alpha.png"><img src="../images/rainEffect/weather/texture-rain-fg.png"><img src="../images/rainEffect/weather/texture-rain-bg.png"><img src="../images/rainEffect/weather/texture-sun-fg.png"><img src="../images/rainEffect/weather/texture-sun-bg.png"><img src="../images/rainEffect/weather/texture-fallout-fg.png"><img src="../images/rainEffect/weather/texture-fallout-bg.png"><img src="../images/rainEffect/weather/texture-drizzle-fg.png"><img src="../images/rainEffect/weather/texture-drizzle-bg.png"></div>
+        <div class="rain-container">
+          <div class="slideshow">
+            <canvas width="1" height="1" id="container" style="position:absolute;left:0;"></canvas>
+            <div id="slide-1" data-weather="rain" class="slide">
+              <div class="slide__element slide__element--temp">豪睿建筑防水工程</div>
+            </div>
+          </div>
+        </div>
         <div class="ui container">
           <div class="ui large secondary inverted pointing menu"><a class="toc item"><i class="sidebar icon"></i></a><a href="home.html" class="item">主页</a><a href="article.html" class="item">案例</a><a href="company.html" class="item">公司介绍</a><a href="ours.html" class="item">联系我们</a>
           </div>
-        </div>
-        <div class="ui text container">
-          <h1 class="ui inverted header">豪睿建筑防水工程有限公司</h1>
-          <h2>专业的防水公司</h2>
         </div>
       </div>
       <div class="ui vertical segment centered custom-content">
@@ -58,7 +63,7 @@
                 <p>案例</p>
               </div>
             </div>
-            <div class="ui stackable three column grid">
+            <div id="articleList" class="ui stackable three column grid">
               <div class="column">
                 <div class="ui link cards">
                   <div class="card">
@@ -166,15 +171,15 @@
               </div>
             </div>
             <div class="ui stackable one column grid">
-              <p> 上海云风防水工程有限公司是一家专业从事建筑防水工程施工、建筑堵漏、防腐防潮保温工程、建筑装修工程的施工企业。</p>
+              <p>豪睿建筑防水工程有限公司是一家专业从事建筑防水工程施工、建筑堵漏、防腐防潮保温工程、建筑装修工程的施工企业。</p>
               <p>质量是根本，服务是保障。公司以专业知识理论培训和实践施工两个方面着手，组建了一个完整、严密、高效的质量管理网络，企业根据防水、防腐工程的技术要求，从每一道工序标准进行人员培训和生产考核，从机械设备、原材料、配件、工序半成品和成品进行严格的检查。建立了职责分明、奖罚分明的管理制度，保证了企业的产品质量。</p>
               <p>展望未来，前程似锦。公司将以先进的管理手段，完善的质量保证体系，优良的售后服务进行现代企业运作。公司全体同仁愿与社会各界真诚携手、励精图强、追求卓越，共创美好的未来！</p>
               <p>本公司目前新配备有国内最先进的一整套机械设备。对于屋顶、墙面、地下室、水池、卫生间、车库坡道、沉降缝、彩钢板、公装等…疑难渗漏和装修问题有最佳的解决方案、免除漏水和设计之忧愁！</p>
-              <p>主营：上海防水工程报价;上海防水工程施工;上海防水工程公司;上海防水堵漏工程;防水工程公司;上海防水工程;防水堵漏工程;上海防水工程施工方案;上海防水施工;屋面防水;房屋补漏;地下室防水;外墙防水施工;屋顶防水;防水工程;防水施工公司;专业防水堵漏;专业防水公司;地下防水施工方案;外墙防水施工方案</p>
+              <p>主营：防水工程报价;防水工程施工;防水工程公司;防水堵漏工程;防水工程公司;防水工程;防水堵漏工程;防水工程施工方案;防水施工;屋面防水;房屋补漏;地下室防水;外墙防水施工;屋顶防水;防水工程;防水施工公司;专业防水堵漏;专业防水公司;地下防水施工方案;外墙防水施工方案</p>
               <p>本公司的主营产品：</p>
-              <p>企业名称：上海云风防水工程有限公司</p>
-              <p>品牌名称：云风防水工程</p>
-              <p>所在地：上海市 上海市 闵行区上海市闵行区莘庄镇疏影路1111弄146号101室</p>
+              <p>企业名称：广州市豪睿建筑防水工程有限公司</p>
+              <p>品牌名称：豪睿建筑防水工程</p>
+              <p>所在地：广州市番禺区市桥光明北路372号</p>
             </div>
           </div>
         </div>
